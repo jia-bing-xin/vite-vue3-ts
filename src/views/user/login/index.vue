@@ -1,8 +1,8 @@
 <template>
   <div>
     登录页
-    <el-button type="primary" @click="goRegister">去注册</el-button>
-    <el-button type="primary" @click="goHome">首页</el-button>
+    <el-button type="primary" @click="goRegister">注册</el-button>
+    <el-button type="primary" @click="goHome">登录</el-button>
   </div>
 </template>
 <script setup lang="ts">
