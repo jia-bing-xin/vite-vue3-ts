@@ -1,13 +1,10 @@
-<script setup lang="ts">
-import { ref } from 'vue'
-
-defineProps<{ msg: string }>()
-
-const count = ref(0)
-</script>
-
 <template>
-  <h1>{{ msg }}</h1>
+  <el-select v-model="selected" class="m-2" placeholder="Select" size="large" @change="handleChange">
+    <el-option :label="$t('header.zh')" value="zh_CN" />
+    <el-option :label="$t('header.en')" value="en" />
+  </el-select>
+  <div class="login">6546546614352</div>
+  <h1>{{ msg }}-{{ $t('header.home') }}</h1>
 
   <div class="card">
     <button type="button" @click="count++">count is {{ count }}</button>
@@ -19,9 +16,8 @@ const count = ref(0)
 
   <p>
     Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
+    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank">create-vue</a>, the official Vue + Vite
+    starter
   </p>
   <p>
     Install
@@ -31,7 +27,22 @@ const count = ref(0)
   <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
 </template>
 
-<style scoped>
+<script setup lang="ts">
+import { ref } from 'vue'
+import { useI18n } from 'vue-i18n'
+const { locale, t } = useI18n()
+const selected = ref(localStorage.getItem('lang'))
+defineProps<{ msg: string }>()
+
+const count = ref(0)
+function handleChange(val: String): void {
+  locale.value = selected.value as string
+  localStorage.setItem('lang', selected.value as string)
+  console.log(localStorage.getItem('lang'))
+}
+</script>
+
+<style scoped lang="scss">
 .read-the-docs {
   color: #888;
 }
