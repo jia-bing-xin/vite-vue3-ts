@@ -1,6 +1,8 @@
 export default {
-  header: {
-    home: '首页',
+  login: {
+    title:'登录'
+  },
+  lang: {
     zh: '中文',
     en:'英文',
   }

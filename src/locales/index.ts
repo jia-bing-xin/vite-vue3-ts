@@ -4,7 +4,7 @@ import messages from './languange'
  
 const i18n = createI18n({
   locale: localStorage.getItem('lang') || 'zh_CN',// 默认语言
-  fallbackLocale: 'zh_CN',// 不存在默认则为英文
+  fallbackLocale: 'zh_CN',// 不存在默认则为中文
   allowComposition: true,// 允许组合式api
   messages
 })

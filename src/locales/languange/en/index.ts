@@ -1,7 +1,8 @@
 export default {
-  header: {
-    // nav menu
-    home: 'Home',
+  login: {
+    title:'Login'
+  },
+  lang: {
     zh: 'Chinese',
     en:'English',
   }
