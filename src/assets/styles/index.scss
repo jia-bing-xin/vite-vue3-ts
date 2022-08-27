@@ -1,0 +1,32 @@
+@import url('@/assets/styles/base.scss');
+//登录页中的设置popover样式
+.el-popover.settingForm {
+  padding: 0;
+  .set-form {
+    padding-left: 10px;
+
+    .el-form-item {
+      margin-right: 10px;
+      .el-form-item__label {
+        padding: 0 10px 0 0;
+      }
+      .el-input__wrapper{
+        height: 26px;
+      }
+      .el-slider{
+        width: 110px;
+      }
+    }
+
+  }
+}
+//修改title颜色
+.settingForm .el-popover__title {
+  margin-top: 10px;
+  font-size: 18px;
+  text-align: center;
+}
+//修改下面的小三角，属性名根据组件的placement位置做相应修改
+.settingForm .popper__arrow::after {
+  border-top-color: #090d29 !important;
+}

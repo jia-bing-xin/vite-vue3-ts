@@ -4,6 +4,5 @@ $font-color: yellow;
 $font-color-fff: var(--font,#fff);
 //登录
 $login-width:var(--loginWidth,400px);
-$login-height:var(--loginHeight,400px);
+$login-opacity:var(--loginOpacity,0.6);
 $login-bg-color:var(--loginBgColor,#fff);
-$login-bd-radius:var(--loginBgRadius,400px);

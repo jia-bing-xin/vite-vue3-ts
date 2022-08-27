@@ -27,11 +27,11 @@ const goHome = () => {
   top: 40%;
   left: 46%;
   transform: translate(-50%, -50%);
-  opacity: 0.6;
-  width: $login-height;
+  opacity: $login-opacity;
+  width: $login-width;
   height: $login-width;
+  border-radius: $login-width;
   background-color: $login-bg-color;
-  border-radius: $login-bd-radius;
 
   .title {
     text-align: center;
