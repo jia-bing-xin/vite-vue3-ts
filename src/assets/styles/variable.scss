@@ -1,8 +1,5 @@
-$bg-colorBlue: #6200ff;
-$bg-colorRed: #ed795a;
-$font-color: yellow;
-$font-color-fff: var(--font,#fff);
-//登录
+//登录-设置
 $login-width:var(--loginWidth,400px);
 $login-opacity:var(--loginOpacity,0.6);
 $login-bg-color:var(--loginBgColor,#fff);
+$login-scale:var(--loginScale,1);

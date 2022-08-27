@@ -16,25 +16,29 @@
             <el-option :label="$t('settingForm.select.en')" value="en" />
           </el-select>
         </el-form-item>
+        <el-form-item :label="$t('settingForm.size')">
+          <el-slider v-model="settingForm.size" :format-tooltip="formatSize" />
+        </el-form-item>
         <el-form-item :label="$t('settingForm.opacity')">
-          <el-slider v-model="settingForm.opacity" :format-tooltip="formatTooltip" />
+          <el-slider v-model="settingForm.opacity" :format-tooltip="formatOpacity" />
         </el-form-item>
-        <el-form-item :label="$t('settingForm.color')">
+        <!-- <el-form-item :label="$t('settingForm.color')">
           <el-color-picker v-model="settingForm.color" />
-        </el-form-item>
+        </el-form-item> -->
       </el-form>
     </el-popover>
   </div>
 </template>
 <script setup lang="ts">
-import { ref, reactive } from 'vue'
+import { reactive } from 'vue'
 import { useI18n } from 'vue-i18n'
 const { locale, t } = useI18n()
 //表单数据
 const settingForm = reactive({
   name: '',
   lang: localStorage.getItem('lang') || 'zh_CN',
-  opacity: 0.6,
+  size: Number(localStorage.getItem('size')) || 0,
+  opacity: Number(localStorage.getItem('opacity')) || 60,
   color: '#fff',
 })
 //切换语言功能
@@ -42,9 +46,18 @@ const handleChangeSelect = (val: String): void => {
   locale.value = settingForm.lang
   localStorage.setItem('lang', locale.value)
 }
-//格式化opacity值
-const formatTooltip = (val: number) => val / 100
-
+//修改size变量值
+const formatSize = (val: number) => {
+  localStorage.setItem('size', `${settingForm.size}`)
+  document.getElementsByTagName('body')[0].style.setProperty('--loginScale', `${1 + Number(settingForm.size) / 400}`);
+  return 400 + val
+}
+//修改opacity变量值
+const formatOpacity = (val: number) => {
+  localStorage.setItem('opacity', `${settingForm.opacity}`)
+  document.getElementsByTagName('body')[0].style.setProperty('--loginOpacity', `${Number(settingForm.opacity) / 100}`);
+  return val / 100
+}
 </script>
 <style lang="scss" scoped>
 .is-Tools {

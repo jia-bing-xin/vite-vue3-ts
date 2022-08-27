@@ -26,7 +26,7 @@ const goHome = () => {
   position: absolute;
   top: 40%;
   left: 46%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale($login-scale);
   opacity: $login-opacity;
   width: $login-width;
   height: $login-width;

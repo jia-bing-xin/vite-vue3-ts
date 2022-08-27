@@ -7,8 +7,9 @@ export default {
     select: {
       lang: '语言',
       zh: '中文',
-      en: '英文',
+      en: '英语',
     },
+    size:'尺寸大小',
     opacity:'不透明度',
     color:'颜色'
   }

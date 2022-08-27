@@ -9,6 +9,7 @@ export default {
       zh: 'Chinese',
       en: 'English',
     },
+    size:'size',
     opacity: 'opacity',
     color: 'color'
   }

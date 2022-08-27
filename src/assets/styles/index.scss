@@ -8,13 +8,15 @@
     .el-form-item {
       margin-right: 10px;
       .el-form-item__label {
+        justify-content: flex-start;
         padding: 0 10px 0 0;
+        width: 74px;
       }
       .el-input__wrapper{
         height: 26px;
       }
       .el-slider{
-        width: 110px;
+        width: 100px;
       }
     }
 
