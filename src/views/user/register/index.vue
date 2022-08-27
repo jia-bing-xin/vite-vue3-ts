@@ -13,9 +13,9 @@
       </el-form-item>
       <el-form-item>
         <div class="func-btn">
-          <el-button type="primary" @click="goLogin" size="large" native-type="submit">{{ $t('register.register') }}
+          <el-button type="primary" @click="goLogin" size="large">{{ $t('register.register') }}
           </el-button>
-          <el-button class="register-btn" @click="goLogin" size="large" native-type="submit">{{ $t('register.backLogin')
+          <el-button class="register-btn" @click="goLogin" size="large">{{ $t('register.backLogin')
           }}</el-button>
         </div>
       </el-form-item>

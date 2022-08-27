@@ -10,9 +10,9 @@
       </el-form-item>
       <el-form-item>
         <div class="func-btn">
-          <el-button type="primary" @click="goHome" size="large" native-type="submit">{{ $t('login.login') }}
+          <el-button type="primary" @click="goHome" size="large">{{ $t('login.login') }}
           </el-button>
-          <el-button class="register-btn" @click="goRegister" size="large" native-type="submit">{{ $t('login.register')
+          <el-button class="register-btn" @click="goRegister" size="large">{{ $t('login.register')
           }}</el-button>
         </div>
       </el-form-item>
