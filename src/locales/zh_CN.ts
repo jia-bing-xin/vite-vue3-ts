@@ -1,6 +1,21 @@
 export default {
   login: {
-    title: '登录',
+    login: '登录',
+    username: '用户名',
+    password: '密码',
+    usernameText: '请输入用户名',
+    passwordText: '请输入密码',
+    register:'注册',
+  },
+  register: {
+    register:'注册',
+    username: '用户名',
+    password: '密码',
+    repassword: '确认密码',
+    usernameText: '请输入用户名',
+    passwordText: '请输入密码',
+    repasswordText: '请输入确认密码',
+    backLogin: '返回登录',
   },
   settingForm: {
     title:'设置',

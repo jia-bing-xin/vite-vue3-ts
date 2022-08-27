@@ -1,15 +1,35 @@
 <template>
   <div class="login">
-    <h1 class="title">{{ $t('login.title') }}</h1>
-    <el-button type="primary" @click="goRegister">注册</el-button>
-    <el-button type="primary" @click="goHome">登录</el-button>
+    <h1 class="title">{{ $t('login.login') }}</h1>
+    <el-form :model="loginForm" class="login-form">
+      <el-form-item :label="$t('login.username')">
+        <el-input v-model="loginForm.user" :placeholder="$t('login.usernameText')" />
+      </el-form-item>
+      <el-form-item :label="$t('login.password')">
+        <el-input v-model="loginForm.password" :placeholder="$t('login.passwordText')" />
+      </el-form-item>
+      <el-form-item>
+        <div class="func-btn">
+          <el-button type="primary" @click="goHome" size="large" native-type="submit">{{ $t('login.login') }}
+          </el-button>
+          <el-button class="register-btn" @click="goRegister" size="large" native-type="submit">{{ $t('login.register')
+          }}</el-button>
+        </div>
+      </el-form-item>
+    </el-form>
   </div>
 </template>
 <script setup lang="ts">
+import { reactive } from 'vue'
 import { useI18n } from 'vue-i18n';
 import { useRouter } from 'vue-router';
 const router = useRouter()
-const { locale, t } = useI18n()
+const { t } = useI18n()
+//表单数据
+const loginForm = reactive({
+  user: '',
+  password: ''
+})
 //切换到注册
 const emit = defineEmits(['handleChange']);
 const goRegister = () => {
@@ -23,22 +43,41 @@ const goHome = () => {
 </script>
 <style lang="scss" scoped>
 .login {
-  position: absolute;
-  top: 40%;
-  left: 46%;
-  transform: translate(-50%, -50%) scale($login-scale);
-  opacity: $login-opacity;
-  width: $login-width;
-  height: $login-width;
-  border-radius: $login-width;
-  background-color: $login-bg-color;
-
   .title {
+    width: 100%;
     text-align: center;
     Letter-spacing: 10px;
-    margin: 10% 0 0 50%;
+    margin-top: 10%;
     font-size: 40px;
-    transform: translateX(-50%);
+  }
+
+  .login-form {
+    .el-form-item {
+      margin: 40px 30px;
+
+      :deep(.el-form-item__label) {
+        justify-content: flex-start;
+        width: 56px;
+        padding: 6px 0;
+        font-size: 18px;
+      }
+
+      .el-input {
+        margin-left: 30px;
+        width: 230px;
+        height: 46px;
+      }
+
+      .func-btn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .register-btn {
+          margin-left: 22px;
+        }
+      }
+    }
   }
 }
 </style>

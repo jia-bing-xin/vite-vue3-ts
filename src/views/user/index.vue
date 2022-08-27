@@ -2,7 +2,9 @@
 <template>
   <div class="bgUser">
     <Setting />
-    <component :is="currentModule ? Login : Register" @handleChange="handleChange" />
+    <div class="login-box">
+      <component :is="currentModule ? Login : Register" @handleChange="handleChange" />
+    </div>
   </div>
 </template>
 <script lang="ts" setup>
@@ -23,5 +25,17 @@ const handleChange = (val: string): void => {
   height: 100vh;
   background: url('@/assets/picture/user/bg-user.png') no-repeat;
   background-size: 100% 100%;
+
+  .login-box {
+    position: absolute;
+    top: 40%;
+    left: 47%;
+    transform: translate(-50%, -50%) scale($login-scale);
+    opacity: $login-opacity;
+    width: $login-width;
+    height: $login-width;
+    border-radius: $login-width;
+    background-color: $login-bg-color;
+  }
 }
 </style>

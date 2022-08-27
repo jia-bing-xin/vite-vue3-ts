@@ -35,7 +35,6 @@ import { useI18n } from 'vue-i18n'
 const { locale, t } = useI18n()
 //表单数据
 const settingForm = reactive({
-  name: '',
   lang: localStorage.getItem('lang') || 'zh_CN',
   size: Number(localStorage.getItem('size')) || 0,
   opacity: Number(localStorage.getItem('opacity')) || 60,
