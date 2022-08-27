@@ -1,4 +1,5 @@
 export default {
+  //登录模块
   login: {
     login: '登录',
     username: '用户名',
@@ -7,6 +8,7 @@ export default {
     passwordText: '请输入密码',
     register:'注册',
   },
+  //注册模块
   register: {
     register:'注册',
     username: '用户名',
@@ -17,6 +19,7 @@ export default {
     repasswordText: '请输入确认密码',
     backLogin: '返回登录',
   },
+  //登录设置功能模块
   settingForm: {
     title:'设置',
     select: {

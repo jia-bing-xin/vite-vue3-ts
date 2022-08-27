@@ -1,4 +1,5 @@
 export default {
+  //登录模块
   login: {
     login: 'login',
     username: 'username',
@@ -7,6 +8,7 @@ export default {
     passwordText: 'Please enter password',
     register:'register',
   },
+  //注册模块
   register: {
     register:'register',
     username: 'username',
@@ -17,6 +19,7 @@ export default {
     repasswordText: 'Please enter repassword',
     backLogin: 'backLogin',
   },
+  //登录设置功能模块
   settingForm: {
     title:'setting',
     select: {
