@@ -30,5 +30,13 @@ export default {
     size:'size',
     opacity: 'opacity',
     color: 'color'
+  },
+  //首页-header
+  homeHeader: {
+    visual: 'visual',
+    component: 'component',
+    document: 'document',
+    administrator: 'administrator',
+    goWarehouse:'go warehouse',
   }
 }

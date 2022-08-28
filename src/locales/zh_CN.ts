@@ -30,5 +30,13 @@ export default {
     size:'尺寸大小',
     opacity:'不透明度',
     color:'颜色'
+  },
+  //首页-header
+  homeHeader: {
+    visual: '可视化',
+    component: '组件',
+    document: '文档',
+    administrator: '后代管理',
+    goWarehouse:'去仓库',
   }
 }

@@ -1,3 +1,4 @@
+import { Chicken } from "@element-plus/icons-vue";
 import { createRouter, createWebHashHistory } from "vue-router";
 
 const routes = [
@@ -7,7 +8,24 @@ const routes = [
   {
     path: "/home",
     name: "home",
-    component: ()=>import ('../views/home/index.vue')
+    component: () => import('../views/home/index.vue'),
+    children: [{
+      path: "/home",
+      name: "home",
+      component: () => import('../views/visual/index.vue')
+    },{
+      path: "/component",
+      name: "component",
+      component: () => import('../views/component/index.vue')
+    },{
+      path: "/document",
+      name: "document",
+      component: () => import('../views/document/index.vue')
+    },{
+      path: "/administrator",
+      name: "administrator",
+      component: () => import('../views/administrator/index.vue')
+    }]
   },
   {
     path: "/login",
