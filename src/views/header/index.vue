@@ -42,7 +42,6 @@ const router = useRouter()
 const goLogin = () => {
   router.push('/login')
 }
-const activeIndex = ref('1')
 const handleSelect = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)
 }
