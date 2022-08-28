@@ -7,6 +7,7 @@
         <el-menu :default-active="$route.path" class="el-menu-demo" mode="horizontal" :ellipsis="false"
           @select="handleSelect" router>
           <el-menu-item index="/home">{{ $t('homeHeader.visual') }}</el-menu-item>
+          <el-menu-item index="/map">{{ $t('homeHeader.map') }}</el-menu-item>
           <el-menu-item index="/component">{{ $t('homeHeader.component') }}</el-menu-item>
           <el-menu-item index="/document">{{ $t('homeHeader.document') }}</el-menu-item>
           <el-menu-item index="/administrator">{{ $t('homeHeader.administrator') }}</el-menu-item>
@@ -71,13 +72,13 @@ const handleChangeSelect = (): void => {
   }
 
   .main {
-    width: 50vw;
+    width: 56vw;
     display: flex;
     justify-content: space-between;
-    min-width: 680px;
+    min-width: 780px;
 
     .nav {
-      width: 380px;
+      width: 520px;
 
       .el-menu-demo {
         height: 56px;

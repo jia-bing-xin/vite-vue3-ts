@@ -34,6 +34,7 @@ export default {
   //首页-header
   homeHeader: {
     visual: 'visual',
+    map:'map',
     component: 'component',
     document: 'document',
     administrator: 'administrator',

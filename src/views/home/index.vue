@@ -21,6 +21,5 @@ import Header from '@/views/header/index.vue'
   width: 90vw;
   height: calc(100% - 56px);
   margin: 10px auto 0;
-  min-width: 765px;
 }
 </style>

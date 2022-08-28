@@ -18,6 +18,10 @@ const routes = [
       name: "component",
       component: () => import('../views/component/index.vue')
     },{
+      path: "/map",
+      name: "map",
+      component: () => import('../views/map/index.vue')
+    },{
       path: "/document",
       name: "document",
       component: () => import('../views/document/index.vue')
