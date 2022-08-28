@@ -1,11 +1,10 @@
 <template>
   <div class="header">
-    <div class="logo">
+    <div class="logo" @click="goHome">
     </div>
     <div class="main">
       <div class="nav">
-        <el-menu :default-active="$route.path" class="el-menu-demo" mode="horizontal" :ellipsis="false"
-          @select="handleSelect" router>
+        <el-menu :default-active="$route.path" class="el-menu-demo" mode="horizontal" :ellipsis="false" router>
           <el-menu-item index="/home">{{ $t('homeHeader.visual') }}</el-menu-item>
           <el-menu-item index="/map">{{ $t('homeHeader.map') }}</el-menu-item>
           <el-menu-item index="/component">{{ $t('homeHeader.component') }}</el-menu-item>
@@ -43,8 +42,9 @@ const router = useRouter()
 const goLogin = () => {
   router.push('/login')
 }
-const handleSelect = (key: string, keyPath: string[]) => {
-  console.log(key, keyPath)
+//切换到首页
+const goHome = () => {
+  router.push('/home')
 }
 //切换语言功能
 const lang = ref(localStorage.getItem('lang') || 'zh_CN')
