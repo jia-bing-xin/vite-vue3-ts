@@ -13,13 +13,12 @@ import Header from '@/views/header/index.vue'
 .header-nav {
   height: 54px;
   line-height: 54px;
-  margin-bottom: 10px;
   border-bottom: 2px solid rgb(226, 210, 210);
 }
 
 .main {
   width: 90vw;
-  height: calc(100% - 56px);
+  height: calc(100vh - 66px);
   margin: 10px auto 0;
 }
 </style>

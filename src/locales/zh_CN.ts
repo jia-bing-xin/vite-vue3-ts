@@ -37,7 +37,7 @@ export default {
     map:'地图',
     component: '组件',
     document: '文档',
-    administrator: '后代管理',
+    administrator: '后台管理',
     goWarehouse:'去仓库',
   }
 }
