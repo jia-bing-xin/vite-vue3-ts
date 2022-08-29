@@ -44,7 +44,8 @@ import Statistics from './statistics/index.vue'
   }
 
   .center {
-    width: 49vw;
+    flex: 1;
+    margin: 0 8px;
     box-shadow: 0 2px 6px 2px rgb(218, 209, 209);
 
   }
