@@ -7,8 +7,15 @@
       <div class="left-center">left-center</div>
       <div class="left-bottom">left-bottom</div>
     </div>
-    <div class="center">center</div>
-    <div class="right">right</div>
+    <div class="center">
+      <div class="center-top">center-top</div>
+      <div class="center-bottom">center-bottom</div>
+    </div>
+    <div class="right">
+      <div class="right-top">right-top</div>
+      <div class="right-center">left-center</div>
+      <div class="right-bottom">left-bottom</div>
+    </div>
   </div>
 </template>
 <script setup lang="ts">
@@ -46,13 +53,44 @@ import Statistics from './statistics/index.vue'
   .center {
     flex: 1;
     margin: 0 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     box-shadow: 0 2px 6px 2px rgb(218, 209, 209);
+
+    .center-top {
+      height: 66.4%;
+      box-shadow: 0 2px 6px 2px rgb(218, 209, 209);
+    }
+
+    .center-bottom {
+      height: 33%;
+      box-shadow: 0 2px 6px 2px rgb(218, 209, 209);
+    }
 
   }
 
   .right {
     width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     box-shadow: 2px 2px 6px rgb(218, 209, 209);
+
+    .right-top {
+      height: 33%;
+      box-shadow: 0 2px 6px 2px rgb(218, 209, 209);
+    }
+
+    .right-center {
+      height: 33%;
+      box-shadow: 0 2px 6px 2px rgb(218, 209, 209);
+    }
+
+    .right-bottom {
+      height: 33%;
+      box-shadow: 0 2px 6px 2px rgb(218, 209, 209);
+    }
   }
 }
 </style>
