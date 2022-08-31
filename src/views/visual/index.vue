@@ -2,9 +2,12 @@
   <div class="visual">
     <div class="left">
       <div class="left-top">
-        <Statistics />
+        <!-- <Statistics /> -->
       </div>
-      <div class="left-center">left-center</div>
+      <div class="left-center">
+        <h1>年龄分布百分比</h1>
+        <ageChart />
+      </div>
       <div class="left-bottom">left-bottom</div>
     </div>
     <div class="center">
@@ -20,6 +23,7 @@
 </template>
 <script setup lang="ts">
 import Statistics from './statistics/index.vue'
+import ageChart from './ageChart/index.vue'
 
 </script>
 <style lang="scss" scoped>
@@ -42,6 +46,11 @@ import Statistics from './statistics/index.vue'
     .left-center {
       height: 33%;
       box-shadow: 0 2px 6px 2px rgb(218, 209, 209);
+
+      h1 {
+        font-size: 1vw;
+        text-align: center;
+      }
     }
 
     .left-bottom {

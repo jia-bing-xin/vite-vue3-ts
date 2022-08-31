@@ -5,7 +5,7 @@ import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 // 引入echarts
-import * as echarts from 'echarts';
+import * as ECharts from 'echarts';
 //引入scss样式
 import '@/assets/styles/index.scss'
 //引入国际化组件
@@ -17,6 +17,7 @@ const app = createApp(App)
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
   app.component(key, component)
 }
-// app.component('echarts',echarts)
+//全局注册ECharts
+app.config.globalProperties.$ECharts = ECharts
 app.use(i18n).use(ElementPlus)
 app.use(router).mount('#app')
