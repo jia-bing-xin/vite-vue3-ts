@@ -4,8 +4,8 @@
 <script setup lang="ts">
 import { onMounted, getCurrentInstance } from 'vue'
 const { proxy } = getCurrentInstance() as any
+const getFontSize = (): Number => document.body.offsetWidth / 190
 const option = {
-  // color: ["#065aab", "#066eab", "#0682ab", "#0696ab", "#06a0ab"],
   tooltip: {
     trigger: "item",
     formatter: "{a} <br/>{b}: {c} ({d}%)"
@@ -16,10 +16,9 @@ const option = {
     // 修改小图标的大小
     itemWidth: 10,
     itemHeight: 10,
-    // 修改图例组件的文字为 12px
     textStyle: {
       // color: "rgba(0,0,255)",
-      fontSize: "12"
+      fontSize: getFontSize()
     }
   },
   series: [
@@ -41,11 +40,11 @@ const option = {
         show: false
       },
       data: [
-        { value: 1, name: "0岁以下" },
-        { value: 4, name: "20-29岁" },
-        { value: 2, name: "30-39岁" },
-        { value: 2, name: "40-49岁" },
-        { value: 1, name: "50岁以上" }
+        { value: 1, name: "20岁以下" },
+        { value: 2, name: "20-29岁" },
+        { value: 3, name: "30-39岁" },
+        { value: 4, name: "40-49岁" },
+        { value: 5, name: "50岁以上" }
       ]
     }
   ]
