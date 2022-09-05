@@ -2,7 +2,8 @@
   <div class="visual">
     <div class="left">
       <div class="left-top">
-        <!-- <Statistics /> -->
+        <h1>用户增长情况</h1>
+        <increaseUserEchart />
       </div>
       <div class="left-center">
         <h1>年龄分布百分比</h1>
@@ -16,15 +17,18 @@
     </div>
     <div class="right">
       <div class="right-top">right-top</div>
-      <div class="right-center">left-center</div>
+      <div class="right-center">
+        <h1>性别分布百分比</h1>
+        <sexChart />
+      </div>
       <div class="right-bottom">left-bottom</div>
     </div>
   </div>
 </template>
 <script setup lang="ts">
-import Statistics from './statistics/index.vue'
+import increaseUserEchart from './increaseUserEchart/index.vue'
 import ageChart from './ageChart/index.vue'
-
+import sexChart from './sexChart/index.vue'
 </script>
 <style lang="scss" scoped>
 .visual {
@@ -41,6 +45,10 @@ import ageChart from './ageChart/index.vue'
     .left-top {
       height: 33%;
       box-shadow: 0 2px 6px 2px rgb(218, 209, 209);
+      h1 {
+        font-size: 1vw;
+        text-align: center;
+      }
     }
 
     .left-center {
@@ -76,7 +84,6 @@ import ageChart from './ageChart/index.vue'
       height: 33%;
       box-shadow: 0 2px 6px 2px rgb(218, 209, 209);
     }
-
   }
 
   .right {
@@ -94,6 +101,10 @@ import ageChart from './ageChart/index.vue'
     .right-center {
       height: 33%;
       box-shadow: 0 2px 6px 2px rgb(218, 209, 209);
+      h1 {
+        font-size: 1vw;
+        text-align: center;
+      }
     }
 
     .right-bottom {
