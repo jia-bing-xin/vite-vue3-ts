@@ -4,7 +4,6 @@
 <script setup lang="ts">
 import { onMounted, getCurrentInstance } from 'vue'
 const { proxy } = getCurrentInstance() as any
-const getFontSize = (): Number => document.body.offsetWidth / 160
 const option = {
   color: ['#2f89cf'],
   tooltip: {
@@ -32,7 +31,7 @@ const option = {
       // 修改刻度标签 相关样式
       axisLabel: {
         color: '#000',
-        fontSize: getFontSize(),
+        fontSize: '12',
       },
       // 不显示x坐标轴的样式
       axisLine: {
@@ -84,9 +83,9 @@ onMounted(() => {
   //添加配置
   echarts1.setOption(option)
   // 自适应
-  window.onresize = function () {
+  window.addEventListener('resize', function () {
     echarts1.resize()
-  }
+  })
 })
 </script>
 <style lang="scss" scoped>

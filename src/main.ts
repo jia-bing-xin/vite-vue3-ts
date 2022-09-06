@@ -6,6 +6,7 @@ import 'element-plus/dist/index.css'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 // 引入echarts
 import * as ECharts from 'echarts';
+import 'echarts-liquidfill'
 //引入scss样式
 import '@/assets/styles/index.scss'
 //引入国际化组件

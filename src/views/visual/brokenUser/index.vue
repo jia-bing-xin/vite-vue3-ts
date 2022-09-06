@@ -10,34 +10,34 @@ const option = {
     trigger: 'axis',
   },
   legend: {},
-  toolbox: {
-    show: true,
-    feature: {
-      dataZoom: {
-        yAxisIndex: 'none',
-      },
-      dataView: { readOnly: false },
-      magicType: { type: ['line', 'bar'] },
-      restore: {},
-      saveAsImage: {},
-    },
-  },
+  // toolbox: {
+  //   show: true,
+  //   feature: {
+  //     dataZoom: {
+  //       yAxisIndex: 'none',
+  //     },
+  //     dataView: { readOnly: false },
+  //     magicType: { type: ['line', 'bar'] },
+  //     restore: {},
+  //     saveAsImage: {},
+  //   },
+  // },
   xAxis: {
     type: 'category',
     boundaryGap: false,
-    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+    data: ['第一季度', '第二季度', '第三季度', '第四季度'],
   },
   yAxis: {
     type: 'value',
-    axisLabel: {
-      formatter: '{value} °C',
-    },
+    // axisLabel: {
+    //   formatter: '{value} °C',
+    // },
   },
   series: [
     {
-      name: 'Highest',
+      name: '访问量',
       type: 'line',
-      data: [10, 11, 13, 11, 12, 12, 9],
+      data: [599, 100, 56, 260],
       markPoint: {
         data: [
           { type: 'max', name: 'Max' },
@@ -49,9 +49,9 @@ const option = {
       },
     },
     {
-      name: 'Lowest',
+      name: '注册量',
       type: 'line',
-      data: [1, -2, 2, 5, 3, 2, 0],
+      data: [260, 560, 20, 600],
       markPoint: {
         data: [{ name: '周最低', value: -2, xAxis: 1, yAxis: -1.5 }],
       },
@@ -83,13 +83,13 @@ onMounted(() => {
   // 获取挂载的组件实例
   const echarts = proxy.$ECharts
   //初始化挂载
-  const echarts1 = echarts.init(document.getElementById('brokenUser'))
+  const echarts5 = echarts.init(document.getElementById('brokenUser'))
   //添加配置
-  echarts1.setOption(option)
+  echarts5.setOption(option)
   // 自适应
-  window.onresize = function () {
-    echarts1.resize()
-  }
+  window.addEventListener('resize', function () {
+    echarts5.resize()
+  })
 })
 </script>
 <style lang="scss" scoped>

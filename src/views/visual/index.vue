@@ -2,7 +2,7 @@
   <div class="visual">
     <div class="left">
       <div class="left-top">
-        <h1>用户增长情况</h1>
+        <h1>注册增长分析</h1>
         <increaseUserEchart />
       </div>
       <div class="left-center">
@@ -12,25 +12,32 @@
       <div class="left-bottom">left-bottom</div>
     </div>
     <div class="center">
-      <div class="center-top">center-top</div>
+      <div class="center-top">
+        <mapEchart />
+      </div>
       <div class="center-bottom">center-bottom</div>
     </div>
     <div class="right">
       <div class="right-top">
-        <h1>用户增长情况</h1>
+        <h1>用户情况分析</h1>
         <brokenUser />
       </div>
       <div class="right-center">
         <h1>性别分布百分比</h1>
         <sexChart />
       </div>
-      <div class="right-bottom">left-bottom</div>
+      <div class="right-bottom">
+        <h1>资料完成度</h1>
+        <informationEchart />
+      </div>
     </div>
   </div>
 </template>
 <script setup lang="ts">
+import mapEchart from './mapEchart/index.vue'
 import brokenUser from './brokenUser/index.vue'
 import increaseUserEchart from './increaseUserEchart/index.vue'
+import informationEchart from './informationEchart/index.vue'
 import ageChart from './ageChart/index.vue'
 import sexChart from './sexChart/index.vue'
 </script>
