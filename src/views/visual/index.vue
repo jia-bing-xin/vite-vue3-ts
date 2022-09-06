@@ -16,7 +16,10 @@
       <div class="center-bottom">center-bottom</div>
     </div>
     <div class="right">
-      <div class="right-top">right-top</div>
+      <div class="right-top">
+        <h1>用户增长情况</h1>
+        <brokenUser />
+      </div>
       <div class="right-center">
         <h1>性别分布百分比</h1>
         <sexChart />
@@ -26,6 +29,7 @@
   </div>
 </template>
 <script setup lang="ts">
+import brokenUser from './brokenUser/index.vue'
 import increaseUserEchart from './increaseUserEchart/index.vue'
 import ageChart from './ageChart/index.vue'
 import sexChart from './sexChart/index.vue'
@@ -65,6 +69,10 @@ import sexChart from './sexChart/index.vue'
       height: 33%;
       box-shadow: 0 2px 6px 2px rgb(218, 209, 209);
     }
+    h1 {
+      font-size: 1vw;
+      text-align: center;
+    }
   }
 
   .center {
@@ -96,6 +104,10 @@ import sexChart from './sexChart/index.vue'
     .right-top {
       height: 33%;
       box-shadow: 0 2px 6px 2px rgb(218, 209, 209);
+      h1 {
+        font-size: 1vw;
+        text-align: center;
+      }
     }
 
     .right-center {
@@ -110,6 +122,10 @@ import sexChart from './sexChart/index.vue'
     .right-bottom {
       height: 33%;
       box-shadow: 0 2px 6px 2px rgb(218, 209, 209);
+      h1 {
+        font-size: 1vw;
+        text-align: center;
+      }
     }
   }
 }
