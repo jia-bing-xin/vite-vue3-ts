@@ -9,13 +9,18 @@
         <h1>年龄分布百分比</h1>
         <ageChart />
       </div>
-      <div class="left-bottom">left-bottom</div>
+      <div class="left-bottom">
+        <h1>技术喜爱对比</h1>
+        <scoreChart />
+      </div>
     </div>
     <div class="center">
       <div class="center-top">
         <mapEchart />
       </div>
-      <div class="center-bottom">center-bottom</div>
+      <div class="center-bottom">
+        <tableNum />
+      </div>
     </div>
     <div class="right">
       <div class="right-top">
@@ -36,9 +41,11 @@
 <script setup lang="ts">
 import mapEchart from './mapEchart/index.vue'
 import brokenUser from './brokenUser/index.vue'
+import scoreChart from './scoreChart/index.vue'
 import increaseUserEchart from './increaseUserEchart/index.vue'
 import informationEchart from './informationEchart/index.vue'
 import ageChart from './ageChart/index.vue'
+import tableNum from './tableNum/index.vue'
 import sexChart from './sexChart/index.vue'
 </script>
 <style lang="scss" scoped>
@@ -96,7 +103,8 @@ import sexChart from './sexChart/index.vue'
     }
 
     .center-bottom {
-      height: 33%;
+      position: relative;
+      height: 32.6%;
       box-shadow: 0 2px 6px 2px rgb(218, 209, 209);
     }
   }

@@ -1,9 +1,11 @@
 import { createApp } from 'vue'
-import {router} from './router/index'
+import App from './App.vue'
+import { router } from './router/index'
 //引入Element-ui
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
+import vue3SeamlessScroll from "vue3-seamless-scroll";
 // 引入echarts
 import * as ECharts from 'echarts';
 import 'echarts-liquidfill'
@@ -11,7 +13,6 @@ import 'echarts-liquidfill'
 import '@/assets/styles/index.scss'
 //引入国际化组件
 import i18n from './locales/i18n';
-import App from './App.vue'
 
 const app = createApp(App)
 //导入所有Icon图标
@@ -20,5 +21,5 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
 }
 //全局注册ECharts
 app.config.globalProperties.$ECharts = ECharts
-app.use(i18n).use(ElementPlus)
+app.use(i18n).use(ElementPlus).use(vue3SeamlessScroll)
 app.use(router).mount('#app')
