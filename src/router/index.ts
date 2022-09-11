@@ -12,23 +12,56 @@ const routes = [
     children: [{
       path: "/home",
       name: "home",
+      meta: {
+        headerMenu: '/home'
+      },
       component: () => import('../views/visual/index.vue')
     },{
       path: "/component",
       name: "component",
+      meta: {
+        headerMenu: '/component'
+      },
       component: () => import('../views/component/index.vue')
     },{
       path: "/map",
       name: "map",
+      meta: {
+        headerMenu: '/map'
+      },
       component: () => import('../views/map/index.vue')
     },{
       path: "/document",
       name: "document",
+      meta: {
+        headerMenu: '/document'
+      },
       component: () => import('../views/document/index.vue')
     },{
       path: "/administrator",
       name: "administrator",
-      component: () => import('../views/administrator/index.vue')
+      redirect: '/administrator/user',
+      meta: {
+        headerMenu: '/administrator', 
+      },
+      component: () => import('../views/administrator/index.vue'),
+      children: [{
+        path: "/administrator/user",
+        name: "user",
+        meta: {
+          headerMenu: '/administrator', 
+          mainMenu: '/administrator/user'
+        },
+        component: () => import('@/views/administrator/user/index.vue')
+      },{
+        path: "/administrator/userLog",
+        name: "userLog",
+        meta: {
+          headerMenu: '/administrator',
+          mainMenu: '/administrator/userLog'
+        },
+        component: () => import('@/views/administrator/userLog/index.vue')
+      }]
     }]
   },
   {
