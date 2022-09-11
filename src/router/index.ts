@@ -1,4 +1,3 @@
-import { Chicken } from "@element-plus/icons-vue";
 import { createRouter, createWebHashHistory } from "vue-router";
 
 const routes = [

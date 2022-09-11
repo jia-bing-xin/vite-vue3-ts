@@ -30,6 +30,9 @@ onMounted(() => {
   echarts.registerMap('china', chinaJSON)
   //添加配置
   echarts4.setOption(option)
+  echarts4.on('click', function (params: any) {
+    console.log(params)
+  });
   // 自适应
   window.addEventListener('resize', function () {
     echarts4.resize()
