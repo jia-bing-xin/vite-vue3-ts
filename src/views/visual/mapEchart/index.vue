@@ -2,8 +2,19 @@
   <div id="mapEchart"></div>
 </template>
 <script setup lang="ts">
-import { ref, onMounted, getCurrentInstance } from 'vue'
+import {
+  ref,
+  reactive,
+  onMounted,
+  getCurrentInstance,
+  provide,
+  inject,
+} from 'vue'
 import chinaJSON from './中华人民共和国.json'
+import { useRouter } from 'vue-router'
+import { useStore } from 'vuex'
+const store = useStore()
+const router = useRouter()
 const { proxy } = getCurrentInstance() as any
 const option = {
   geo: {
@@ -31,8 +42,9 @@ onMounted(() => {
   //添加配置
   echarts4.setOption(option)
   echarts4.on('click', function (params: any) {
-    console.log(params)
-  });
+    store.commit('getMapEchartData', params)
+    router.push('/map')
+  })
   // 自适应
   window.addEventListener('resize', function () {
     echarts4.resize()
