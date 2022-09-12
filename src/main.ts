@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import { router } from './router/index'
+import store from './store'
 //引入Element-ui
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
@@ -22,4 +23,4 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
 //全局注册ECharts
 app.config.globalProperties.$ECharts = ECharts
 app.use(i18n).use(ElementPlus).use(vue3SeamlessScroll)
-app.use(router).mount('#app')
+app.use(router).use(store).mount('#app')
