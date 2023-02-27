@@ -1,18 +1,18 @@
 <template>
   <div class="login">
-    <h1 class="title">{{ $t('login.login') }}</h1>
+    <h1 class="title">{{ t('login.login') }}</h1>
     <el-form :model="loginForm" class="login-form">
-      <el-form-item :label="$t('login.username')">
-        <el-input v-model="loginForm.user" :placeholder="$t('login.usernameText')" />
+      <el-form-item :label="t('login.username')">
+        <el-input v-model="loginForm.user" :placeholder="t('login.usernameText')" />
       </el-form-item>
-      <el-form-item :label="$t('login.password')">
-        <el-input v-model="loginForm.password" :placeholder="$t('login.passwordText')" />
+      <el-form-item :label="t('login.password')">
+        <el-input v-model="loginForm.password" :placeholder="t('login.passwordText')" />
       </el-form-item>
       <el-form-item>
         <div class="func-btn">
-          <el-button type="primary" @click="goHome" size="large">{{ $t('login.login') }}
+          <el-button type="primary" @click="goHome" size="large">{{ t('login.login') }}
           </el-button>
-          <el-button class="register-btn" @click="goRegister" size="large">{{ $t('login.register')
+          <el-button class="register-btn" @click="goRegister" size="large">{{ t('login.register')
           }}</el-button>
         </div>
       </el-form-item>

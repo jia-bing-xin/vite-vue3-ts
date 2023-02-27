@@ -11,17 +11,17 @@
           router
         >
           <el-menu-item index="/home">{{
-            $t('homeHeader.visual')
+            t('homeHeader.visual')
           }}</el-menu-item>
-          <el-menu-item index="/map">{{ $t('homeHeader.map') }}</el-menu-item>
+          <el-menu-item index="/map">{{ t('homeHeader.map') }}</el-menu-item>
           <el-menu-item index="/component">{{
-            $t('homeHeader.component')
+            t('homeHeader.component')
           }}</el-menu-item>
           <el-menu-item index="/document">{{
-            $t('homeHeader.document')
+            t('homeHeader.document')
           }}</el-menu-item>
           <el-menu-item index="/administrator">{{
-            $t('homeHeader.administrator')
+            t('homeHeader.administrator')
           }}</el-menu-item>
         </el-menu>
       </div>
@@ -43,14 +43,14 @@
         </el-dropdown>
         <div class="lang">
           <el-select v-model="lang" size="large" @change="handleChangeSelect">
-            <el-option :label="$t('settingForm.select.zh')" value="zh_CN" />
-            <el-option :label="$t('settingForm.select.en')" value="en" />
+            <el-option :label="t('settingForm.select.zh')" value="zh_CN" />
+            <el-option :label="t('settingForm.select.en')" value="en" />
           </el-select>
         </div>
         <el-tooltip
           class="box-item"
           effect="dark"
-          :content="$t('homeHeader.goWarehouse')"
+          :content="t('homeHeader.goWarehouse')"
           placement="bottom"
         >
           <a

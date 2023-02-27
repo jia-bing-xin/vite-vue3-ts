@@ -4,7 +4,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import amap from '@/component/amap/index.vue'
+import amap from '@/components/amap/index.vue'
 import { ref, onMounted } from 'vue'
 const map = ref(null) // 通过 ref 绑定子组件
 const getSonComponent = () => {

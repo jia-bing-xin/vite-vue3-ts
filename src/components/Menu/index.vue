@@ -6,20 +6,20 @@
           <el-icon>
             <component :is="item.icon" />
           </el-icon>
-          <template #title>{{ $t(`${item.name}`) }}</template>
+          <template #title>{{ t(`${item.name}`) }}</template>
         </el-menu-item>
         <el-sub-menu v-if="item.children" :index="item.path">
           <template #title>
             <el-icon>
               <component :is="item.icon" />
             </el-icon>
-            <span>{{ $t(`${item.name}`) }}</span>
+            <span>{{ t(`${item.name}`) }}</span>
           </template>
           <el-menu-item :index="item.path" v-for="i in item.children">
             <el-icon v-if="i.icon">
               <component :is="i.icon" />
             </el-icon>
-            <template #title>{{ $t(`${i.name}`) }}</template></el-menu-item
+            <template #title>{{ t(`${i.name}`) }}</template></el-menu-item
           >
         </el-sub-menu>
       </template>

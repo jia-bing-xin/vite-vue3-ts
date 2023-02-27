@@ -9,7 +9,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import Menu from '@/component/Menu/index.vue'
+import Menu from '@/components/Menu/index.vue'
 import { ref } from 'vue'
 import { Document, Setting } from '@element-plus/icons-vue'
 import { useI18n } from 'vue-i18n'

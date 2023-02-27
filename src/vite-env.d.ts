@@ -5,4 +5,3 @@ declare module '*.vue' {
   const component: DefineComponent<{}, {}, any>
   export default component
 }
-declare function $t(key: string, params?: any): string 

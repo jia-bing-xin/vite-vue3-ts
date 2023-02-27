@@ -1,21 +1,21 @@
 <template>
   <div class="register">
-    <h1 class="title">{{ $t('register.register') }}</h1>
+    <h1 class="title">{{ t('register.register') }}</h1>
     <el-form :model="registerForm" class="register-form">
-      <el-form-item :label="$t('register.username')">
-        <el-input v-model="registerForm.user" :placeholder="$t('register.usernameText')" />
+      <el-form-item :label="t('register.username')">
+        <el-input v-model="registerForm.user" :placeholder="t('register.usernameText')" />
       </el-form-item>
-      <el-form-item :label="$t('register.password')">
-        <el-input v-model="registerForm.password" :placeholder="$t('register.passwordText')" />
+      <el-form-item :label="t('register.password')">
+        <el-input v-model="registerForm.password" :placeholder="t('register.passwordText')" />
       </el-form-item>
-      <el-form-item :label="$t('register.repassword')">
-        <el-input v-model="registerForm.repassword" :placeholder="$t('register.repasswordText')" />
+      <el-form-item :label="t('register.repassword')">
+        <el-input v-model="registerForm.repassword" :placeholder="t('register.repasswordText')" />
       </el-form-item>
       <el-form-item>
         <div class="func-btn">
-          <el-button type="primary" @click="goLogin" size="large">{{ $t('register.register') }}
+          <el-button type="primary" @click="goLogin" size="large">{{ t('register.register') }}
           </el-button>
-          <el-button class="register-btn" @click="goLogin" size="large">{{ $t('register.backLogin')
+          <el-button class="register-btn" @click="goLogin" size="large">{{ t('register.backLogin')
           }}</el-button>
         </div>
       </el-form-item>
