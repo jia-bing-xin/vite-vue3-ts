@@ -7,9 +7,16 @@
       }}</el-checkbox>
     </el-checkbox-group>
   </div>
+  <div class="tools_2" v-if="false">
+    <el-checkbox v-model="checked1">描点</el-checkbox>
+
+    <el-checkbox v-model="checked1">划线</el-checkbox>
+
+    <el-checkbox v-model="checked1">划圆</el-checkbox>
+  </div>
 </template>
 <script setup lang="ts">
-import { onMounted, inject } from 'vue'
+import { onMounted } from 'vue'
 import { ref } from 'vue'
 const checkedCities = ref(['城市列表', '缩放控件'])
 const showFunction = ['城市列表', '比例尺', '缩放控件', '滚轮缩放']
@@ -62,6 +69,7 @@ const changeShow = (val: string[]) => {
 onMounted(() => {
   initMap(checkedCities.value)
 })
+const checked1 = ref(true)
 </script>
 <style lang="scss" scoped>
 #baiduMap {
@@ -81,6 +89,22 @@ onMounted(() => {
     &:deep(.el-checkbox__label) {
       color: #fff;
     }
+  }
+}
+
+.tools_2 {
+  padding: 10px 0px 10px 30px;
+  position: absolute;
+  z-index: 99;
+  top: calc(50% - 66px);
+  right: 5vw;
+  transform: translateY(-50%);
+  background-color: rgb(110, 105, 105, 0.6);
+  display: flex;
+  flex-direction: column;
+
+  &:deep(.el-checkbox__label) {
+    color: #fff;
   }
 }
 </style>
