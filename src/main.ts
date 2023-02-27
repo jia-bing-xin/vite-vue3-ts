@@ -13,7 +13,7 @@ import 'echarts-liquidfill'
 //引入scss样式
 import '@/assets/styles/index.scss'
 //引入国际化组件
-import i18n from './locales/i18n';
+import i18n from '@/plugins/vueI18n';
 
 const app = createApp(App)
 //导入所有Icon图标

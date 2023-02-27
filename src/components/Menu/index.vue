@@ -19,20 +19,17 @@
             <el-icon v-if="i.icon">
               <component :is="i.icon" />
             </el-icon>
-            <template #title>{{ t(`${i.name}`) }}</template></el-menu-item
-          >
+            <template #title>{{ t(`${i.name}`) }}</template></el-menu-item>
         </el-sub-menu>
       </template>
     </el-menu>
   </div>
 </template>
 <script setup lang="ts">
-import { ref, onMounted, defineProps } from 'vue'
+import { ref, defineProps, nextTick } from 'vue'
 import Component from '@/views/component/index.vue'
 import { useI18n } from 'vue-i18n'
-const { locale, t } = useI18n()
-
-//是否缩小菜单
+const { t } = useI18n()
 const porps = defineProps<{
   parentRef: HTMLElement | undefined
   menuData: {
@@ -42,24 +39,28 @@ const porps = defineProps<{
     children?: { name: string; path: string; icon?: any }[]
   }[]
 }>()
-const isCollapse = ref(porps.parentRef?.clientWidth! <= 810)
+//是否缩小菜单
+const isCollapse = ref(porps.parentRef?.clientWidth <= 810)
 const getisCollapse = () => {
-  isCollapse.value = porps.parentRef?.clientWidth! <= 810
+  isCollapse.value = porps.parentRef?.clientWidth <= 810
 }
-onMounted(() => {
+window.addEventListener('resize', getisCollapse)
+nextTick(() => {
   getisCollapse()
 })
-window.addEventListener('resize', getisCollapse)
 </script>
 <style lang="scss" scoped>
 .menu {
   width: 100%;
   height: 100%;
+
   .el-menu {
     border: 0;
+
     .el-menu-item:hover {
       background-color: #fff;
     }
+
     .el-sub-menu {
       width: 160px;
     }
