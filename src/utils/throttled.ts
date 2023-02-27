@@ -1,5 +1,5 @@
 /**
- * @description: 
+ * @description: 节流
  * @param {*} fn 回调
  * @param {*} delay 等待时间
  */
