@@ -11,9 +11,7 @@
 <script setup lang="ts">
 import Menu from '@/components/Menu/index.vue'
 import { Document, Setting } from '@element-plus/icons-vue'
-import { ref, onMounted } from 'vue'
-import { useI18n } from 'vue-i18n'
-const { locale, t } = useI18n()
+import { ref } from 'vue'
 const currentRef = ref<HTMLElement>()
 const menuData = [
   {
