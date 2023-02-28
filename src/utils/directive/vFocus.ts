@@ -23,8 +23,6 @@ function getInputNodeItem(node, index) {
         }
     }
     getInputNodeList(node)
-    //用户从1开始,数组是从0开始
-    index--
     if (isStrNumOrNum(index)) {
         index = index > res.length ? res.length - 1 : (index < 0 ? 0 : index)
     } else index = 0
