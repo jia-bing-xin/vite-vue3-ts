@@ -2,12 +2,10 @@
  * @description: 使input立即获取焦点
  * @param {String | Number} 使第几个input获取焦点
  */
-import getInputNode from "../getInputNode"
+import getTarNameNode from "../getTarNameNode"
 const vFocus = {
     mounted: (el, binding) => {
-        if (el.tagName !== 'INPUT') {
-            el.children && getInputNode(el.children, binding.value, 'INPUT')?.focus()
-        } else el.focus()
+        (el.tagName !== 'INPUT' && el.children ? getTarNameNode(el.children, 'INPUT', binding.value) : el)?.focus()
     }
 }
 export default vFocus

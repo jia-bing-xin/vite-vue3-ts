@@ -2,6 +2,7 @@
  * @description: 图片懒加载
  */
 import throttled from '../throttled'
+import getTarNameNode from "../getTarNameNode"
 const vLazyImg = {
     beforeMount: (el, binding) => {
         el.$data_src = binding.value;
@@ -35,7 +36,7 @@ function scrollEvent(el) {
 // 滚动触发后, 需要处理的后续逻辑
 function loadImg(el) {
     const clientHeight = getClientHeight();
-    const { top, bottom } = el.getBoundingClientRect();
+    const { top, bottom } = (el.tagName !== 'IMG' && el.children ? getTarNameNode(el.children, 'IMG') : el)?.getBoundingClientRect();
     const realSrc = el.$data_src;
     (top < clientHeight && bottom > 0) && realSrc && (el.src = realSrc);
 }

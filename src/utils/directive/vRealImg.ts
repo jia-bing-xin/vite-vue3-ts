@@ -1,12 +1,13 @@
 /**
  * @description: 图片请求失败的时候显示另一张图片:<img v-real-img="'images/logo.png'" src="images/errorLogo.png"/>
  */
+import getTarNameNode from "../getTarNameNode"
 const vRealImg = {
     beforeMount: async (el, binding) => {
         const imgURL = binding.value;
         if (imgURL) {
             const exist = await imageIsExist(imgURL);
-            exist && el.setAttribute('src', imgURL);
+            exist && (el.tagName !== 'IMG' && el.children ? getTarNameNode(el.children, 'IMG') : el)?.setAttribute('src', imgURL);
         }
     }
 }
