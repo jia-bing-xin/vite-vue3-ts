@@ -26,7 +26,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import { ref, defineProps, nextTick } from 'vue'
+import { ref, nextTick } from 'vue'
 import Component from '@/views/component/index.vue'
 import { useI18n } from 'vue-i18n'
 const { t } = useI18n()
