@@ -1,8 +1,8 @@
 /**
  * @description: 图片懒加载
  */
-import { throttled } from '../throttled'
-export const vLazyImg = {
+import throttled from '../throttled'
+const vLazyImg = {
     beforeMount: (el, binding) => {
         el.$data_src = binding.value;
     },
@@ -39,7 +39,6 @@ function loadImg(el) {
     const realSrc = el.$data_src;
     (top < clientHeight && bottom > 0) && realSrc && (el.src = realSrc);
 }
-
 // 获取视口高度, 兼容不同浏览器厂商
 function getClientHeight() {
     const dClientHeight = document.documentElement.clientHeight;
@@ -52,3 +51,4 @@ function getClientHeight() {
     }
     return clientHeight;
 }
+export default vLazyImg

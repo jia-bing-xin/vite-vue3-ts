@@ -4,7 +4,7 @@
  * @param {*} delay  延迟时间
  * @param {*} immediate 是否立即执行
  */
-export function debounce(fn, delay = 500, immediate = false) {
+export default function debounce(fn, delay = 500, immediate = false) {
     let timer = null;
     return (...arg) => {
         if (timer) {

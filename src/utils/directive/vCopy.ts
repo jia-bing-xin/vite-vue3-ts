@@ -3,7 +3,7 @@
  * @param {String | Number}: copy的值
  */
 import { ElMessage } from 'element-plus'
-export const vCopy = {
+const vCopy = {
     mounted: (el, binding) => {
         el.targetContent = binding.value;
         el.addEventListener('click', () => {
@@ -31,3 +31,4 @@ export const vCopy = {
         el.removeEventListener('click')
     }
 }
+export default vCopy

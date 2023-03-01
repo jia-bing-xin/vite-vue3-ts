@@ -3,7 +3,7 @@
  * @param {*} fn 回调
  * @param {*} delay 等待时间
  */
-export function throttled(fn, delay) {
+export default function throttled(fn, delay) {
     let timer = null
     let starttime = Date.now()
     return (...arg) => {

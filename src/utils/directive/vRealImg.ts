@@ -1,7 +1,7 @@
 /**
  * @description: 图片请求失败的时候显示另一张图片:<img v-real-img="'images/logo.png'" src="images/errorLogo.png"/>
  */
-export const vRealImg = {
+const vRealImg = {
     beforeMount: async (el, binding) => {
         const imgURL = binding.value;
         if (imgURL) {
@@ -27,3 +27,5 @@ function imageIsExist(url) {
         }
     })
 }
+
+export default vRealImg

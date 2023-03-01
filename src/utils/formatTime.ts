@@ -2,7 +2,7 @@
  * @param {Date | number | string} time 需要转换的时间
  * @param {String} fmt 需要转换的格式 如 yyyy-MM-dd、yyyy-MM-dd HH:mm:ss
  */
-export function formatTime(time: Date | number | string | null, fmt: string) {
+export default function formatTime(time: Date | number | string | null, fmt: string) {
     if (!time) return ''
     else {
         const date = new Date(time)
