@@ -39,9 +39,8 @@ const goRegister = () => {
 }
 //切换到首页
 const goHome = async () => {
-  const formData = new FormData()
-  for (let key in loginForm) {
-    formData.set(key, loginForm[key])
+  const formData = {
+    ...loginForm
   }
   let res = await postLogin(formData)
   console.log(res)
