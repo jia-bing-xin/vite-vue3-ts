@@ -23,7 +23,6 @@
 import { reactive } from 'vue'
 import { useI18n } from 'vue-i18n';
 import { useRouter } from 'vue-router';
-import { postLogin } from '@/api';
 const router = useRouter()
 const { t } = useI18n()
 //表单数据
@@ -39,12 +38,7 @@ const goRegister = () => {
 }
 //切换到首页
 const goHome = async () => {
-  const formData = {
-    ...loginForm
-  }
-  let res = await postLogin(formData)
-  console.log(res)
-  // router.push('/home')
+  router.push('/home')
 }
 </script>
 <style lang="scss" scoped>
