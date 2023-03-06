@@ -1,15 +1,34 @@
 <template>
   <div ref="boxRef" class="table-box">
-    <el-table :data="tableData" :style="{ width: tableWidth }" :height="tableHeight">
-      <el-table-column prop="date" label="Date" align="center" :show-overflow-tooltip="true" />
-      <el-table-column prop="name" label="Name" align="center" :show-overflow-tooltip="true" />
-      <el-table-column prop="address" label="Address" align="center" :show-overflow-tooltip="true" />
+    <el-table
+      :data="tableData"
+      :style="{ width: tableWidth }"
+      :height="tableHeight"
+    >
+      <el-table-column
+        prop="date"
+        label="Date"
+        align="center"
+        :show-overflow-tooltip="true"
+      />
+      <el-table-column
+        prop="name"
+        label="Name"
+        align="center"
+        :show-overflow-tooltip="true"
+      />
+      <el-table-column
+        prop="address"
+        label="Address"
+        align="center"
+        :show-overflow-tooltip="true"
+      />
     </el-table>
   </div>
 </template>
 <script setup lang="ts">
-// import { Vue3SeamlessScroll } from 'vue3-seamless-scroll'
-import { ref, onMounted } from 'vue'
+import { Vue3SeamlessScroll } from 'vue3-seamless-scroll'
+import { ref, onMounted, nextTick } from 'vue'
 //table表格宽高自适应
 const boxRef = ref<HTMLElement>()
 const tableHeight = ref(boxRef.value?.clientHeight)
