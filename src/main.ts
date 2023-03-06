@@ -6,7 +6,7 @@ import store from './store'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
-import vue3SeamlessScroll from "vue3-seamless-scroll";
+// import vue3SeamlessScroll from "vue3-seamless-scroll";
 // 引入echarts
 import * as ECharts from 'echarts';
 import 'echarts-liquidfill'
@@ -22,5 +22,6 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
 }
 //全局注册ECharts
 app.config.globalProperties.$ECharts = ECharts
-app.use(i18n).use(ElementPlus).use(vue3SeamlessScroll)
+app.use(i18n).use(ElementPlus)
+  // .use(vue3SeamlessScroll)
 app.use(router).use(store).mount('#app')
