@@ -10,24 +10,35 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "strictFunctionTypes": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "experimentalDecorators": true,
+    "noImplicitAny": false,
+    "allowJs": true,
+    "baseUrl": ".",
     "lib": [
       "ESNext",
       "DOM"
     ],
     "skipLibCheck": true,
-    "baseUrl": ".",
     "paths": {
       "@/*": [
         "src/*"
       ]
     },
-    "allowJs": true,
   },
   "include": [
     "src/**/*.ts",
     "src/**/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue"
+  ],
+  "exclude": [
+    "dist",
+    "node_modules"
   ],
   "references": [
     {
