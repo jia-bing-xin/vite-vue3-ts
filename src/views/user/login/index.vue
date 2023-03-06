@@ -3,7 +3,7 @@
     <h1 class="title">{{ t('login.login') }}</h1>
     <el-form :model="loginForm" class="login-form">
       <el-form-item :label="t('login.username')">
-        <el-input v-model="loginForm.user" :placeholder="t('login.usernameText')" />
+        <el-input v-model="loginForm.user_phone" :placeholder="t('login.usernameText')" />
       </el-form-item>
       <el-form-item :label="t('login.password')">
         <el-input v-model="loginForm.password" :placeholder="t('login.passwordText')" />
@@ -23,11 +23,12 @@
 import { reactive } from 'vue'
 import { useI18n } from 'vue-i18n';
 import { useRouter } from 'vue-router';
+import { postLogin } from '@/api';
 const router = useRouter()
 const { t } = useI18n()
 //表单数据
 const loginForm = reactive({
-  user: '',
+  user_phone: '',
   password: ''
 })
 //切换到注册
@@ -37,8 +38,14 @@ const goRegister = () => {
   router.push('/register')
 }
 //切换到首页
-const goHome = () => {
-  router.push('/home')
+const goHome = async () => {
+  const formData = new FormData()
+  for (let key in loginForm) {
+    formData.set(key, loginForm[key])
+  }
+  let res = await postLogin(formData)
+  console.log(res)
+  // router.push('/home')
 }
 </script>
 <style lang="scss" scoped>

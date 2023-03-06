@@ -1,7 +1,7 @@
 //对于axios进行二次封装
 import axios from "axios";
 //获取仓库:存储数据
-import store from "@/store";
+// import store from "@/store";
 //引入进度条
 import nprogress from 'nprogress';
 //引入相关进度条的样式
