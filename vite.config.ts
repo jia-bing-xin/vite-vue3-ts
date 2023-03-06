@@ -114,14 +114,19 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       }
     },
     server: {
+      port: 3000,
       proxy: {
+        // 选项写法
         '/api': {
-          target: env.VITE_DEV_SERVER_LOCA,
+          target: [process.env.VITE_DEV_SERVER_LOCAL],
           changeOrigin: true,
-          ws: true,
           rewrite: path => path.replace(/^\/api/, '')
         }
       },
+      hmr: {
+        overlay: false
+      },
+      host: '0.0.0.0'
     },
   }
 }
